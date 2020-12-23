@@ -10,7 +10,7 @@ class App {
         this._app.use('/', express.static(path.resolve(__dirname, '../public')));
 
         this._app.get('/getAllGames', this.onGetAllGames);
-        this._app.get('/getGame/id', this.onGetGame);
+        this._app.post('/getGame/id', this.onGetGame);
         this._app.post('/addNewGame', this.onSaveNewGame);
     }
 
