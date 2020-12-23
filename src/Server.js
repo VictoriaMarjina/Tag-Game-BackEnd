@@ -9,7 +9,7 @@ class Server {
 
     start = () => {
         this._server.listen(this._port);
-        console.log(`SERVER HAS BEEN STARTED ON PORT: ${this._port}`)
+        //console.log(`SERVER HAS BEEN STARTED ON PORT: ${this._port}`)
     }
 }
 
