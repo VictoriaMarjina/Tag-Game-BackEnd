@@ -14,7 +14,7 @@ class App {
         this._app.post('/addNewGame', this.onSaveNewGame);
     }
 
-    onGetAllGames = (res) => {
+    onGetAllGames = (req, res) => {
         const count = this._db.getGamesCount();
 
         res.send(count);
@@ -22,7 +22,8 @@ class App {
     }
 
     onGetGame = (req, res) => {
-        const id = req;
+        console.log(res);
+        const id = req.json();
         const game = this._db.getGame(id);
 
         res.send(game);
@@ -30,7 +31,8 @@ class App {
     }
 
     onSaveNewGame = (req, res) => {
-        const { body } = req;
+        console.log(req);
+        const { body } = req.json();
         //console.log(body);
         this._db.saveNewGame(body);
         res.end();
