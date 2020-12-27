@@ -8,6 +8,18 @@ class Model {
     saveNewGame = newGame => {
         this.games.push(newGame);
     }
+
+    getGamesCount = () => {
+        return this.games.length;
+    }
+
+    getGame = id => {
+        this.games.forEach(element => {
+            if(element.id === id){
+               return element;
+            }
+        });
+    }
 }
 
 module.exports = Model;
