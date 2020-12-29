@@ -4,7 +4,7 @@ const Server = require('./Server');
 const Model = require('./model/Model');
 
 function init() {
-    const port = 4000 || process.env.PORT;
+    const port = 2020 || process.env.PORT;
 
     const db = new Model();
     const app = new App(db);

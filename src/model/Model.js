@@ -10,12 +10,15 @@ class Model {
     }
 
     getGamesCount = () => {
-        return this.games.length;
+        const count = this.games.length;
+
+        return count;
     }
 
     getGame = id => {
         this.games.forEach(element => {
-            if(element.id === id){
+            if(element.id == id){
+                
                return element;
             }
         });
